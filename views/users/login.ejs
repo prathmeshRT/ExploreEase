@@ -1,18 +1,34 @@
 <% layout("/layouts/boilerPlate") %>
 
-<div class="row mt-3">
-    <h1 class="col-6 offset-3">Login</h1>
-    <div class="col-6 offset-3">
-        <form action="/login" method="post" novalidate class="needs-validation">
-            <div class="mb-3">
-                <lable for="username" class="form-label">Username</lable>
-                <input type="text" class="form-control" name="username" id="username" required>
-            </div>
-            <div class="mb-3">
-                <lable for="password" class="form-label">Password</lable>
-                <input type="password" class="form-control" name="password" id="password" required>
-            </div>
-            <button class="btn btn-success">Login</button>
-        </form>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <!-- Header -->
+        <h1 class="text-center mb-4">Login</h1>
+        
+        <!-- Form Container -->
+        <div class="col-12 col-md-8 col-lg-6">
+            <form action="/login" method="post" novalidate class="needs-validation">
+                <!-- Username Field -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username" id="username" required>
+                    <div class="invalid-feedback">
+                        Please enter your username.
+                    </div>
+                </div>
+                
+                <!-- Password Field -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                    <div class="invalid-feedback">
+                        Please enter your password.
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <button class="btn btn-success d-block mx-auto">Login</button>
+            </form>
+        </div>
     </div>
 </div>
